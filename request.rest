@@ -1,0 +1,59 @@
+GET http://localhost:3003/ping
+Content-Type: application/json
+
+###
+GET http://localhost:3003/turmasAtivas
+Content-Type: application/json
+
+###
+POST http://localhost:3003/turma
+Content-Type: application/json
+
+{
+    "nome": "Barros",
+    "modulo":"6"
+}
+
+###
+POST http://localhost:3003/estudante
+Content-Type: application/json
+
+{
+    "nome": "Juçara3 Ecker",
+    "email": "juçara3@hotmail.com",
+    "dataNasc": "1991-09-04",
+    "turmaId": "1680353270691"
+}
+
+###
+POST http://localhost:3003/especialidade
+Content-Type: application/json
+
+{
+    "nome":"POO"
+}
+
+###
+POST http://localhost:3003/docente
+Content-Type: application/json
+
+{
+    "nome": "Teste1",
+    "email": "teste1@hotmail.com",
+    "dataNasc": "1994-10-14",
+    "turmaId": "1680353957942",
+    "especialidadeId": "1680365857362"
+}
+
+###
+PATCH http://localhost:3003/turma?novoModulo=5&turmaId=1680353957942
+Content-Type: application/json
+
+###
+GET http://localhost:3003/estudante/ecker
+Content-Type: application/json
+
+
+###
+PATCH http://localhost:3003/estudante?estudanteId=1680360514775&novaTurma=1680353142189
+Content-Type: application/json
